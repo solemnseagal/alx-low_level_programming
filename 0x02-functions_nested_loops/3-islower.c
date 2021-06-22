@@ -7,9 +7,11 @@
 int _islower(int c)
 {
 int i;
+char j;
 for (i = 97; i < 123; i++)
 {
-if (c == i)
+j = i
+if (c == j)
 {
 return (1);
 }
