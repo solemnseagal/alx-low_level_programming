@@ -6,12 +6,7 @@
 */
 int _islower(int c)
 {
-int i;
-char j;
-for (i = 97; i < 123; i++)
-{
-j = i
-if (c == j)
+if (c >=97 && c <= 122)
 {
 return (1);
 }
@@ -21,4 +16,3 @@ return (0);
 }
 }
 }
-
