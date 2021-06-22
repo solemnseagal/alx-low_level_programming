@@ -1,10 +1,8 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet - check the code for ALX School students.
  *
- * Description: 'and that piece of art is useful" - Dora Korpar, 2015-10-19'
- *
- * Return: Always 0 (Success)
+ * Return: Always void.
  */
 void print_alphabet(void)
 {
