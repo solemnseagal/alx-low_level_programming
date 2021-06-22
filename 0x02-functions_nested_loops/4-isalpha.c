@@ -1,12 +1,15 @@
 #include "holberton.h"
 /**
-* _isalpha - Print the alphabet in lowercase.
+* _isalpha - Shows 1 if the input is c
+* letter Another cases, shows 0
 *
-* Return: 0 if variable c is not a letter or 1 if c is a letter, uppercase or lowercase.
+* @c: The character in ASCII code
+*
+* Return: 1 for letters. Returns 0 otherwise
 */
 int _isalpha (int c)
 {
-if (c >= 65 && c <= 90 || c >= 97 && c <= 122)
+if (c >= 65 && c <= 90) || (c >= 97 && c <= 122)
 {
 return (1);
 }
