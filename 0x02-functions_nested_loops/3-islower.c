@@ -1,18 +1,22 @@
 #include "holberton.h"
 /**
-* print_alphabet_x10 - Print the alphabet in lowercase.
+* _islower - Print the alphabet in lowercase.
 *
-* Return: void.
+* Return: 0 or 1.
 */
 int _islower(int c)
 {
-if (c == 'c')
+int i;
+for (i = 97; i < 123; i++)
+{
+if (c == i)
 {
 return (1);
 }
 else
 {
 return (0);
+}
 }
 }
 
