@@ -9,13 +9,14 @@
 int main(void)
 {
 int i;
-for (i = 1; i <= 100; i++)
+for (i = 1; i < 100; i++)
 {
 ((i % 15 == 0)) ? printf("%s ", "FizzBuzz")
 : (i % 3 == 0) ? printf("%s ", "Fizz")
 : (i % 5 == 0) ? printf("%s ", "Buzz")
 : printf("%d ", i);
 }
+printf("Buzz");
 printf("\n");
 return (0);
 }
