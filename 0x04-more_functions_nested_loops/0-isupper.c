@@ -1,8 +1,9 @@
 #include<stdio.h>
 /**
- * _isupper - check the code for ALX School students.
+ * _isupper - check the code for uppercase character.
  *
- * Return: 1 if uppercase and 0 is lower case.
+ * @c: parsed as parameter
+ * Return: 1 if c is uppercase and 0 if c is lower case.
  */
 int _isupper(int c)
 {
@@ -10,9 +11,8 @@ if ((c >= 65) && (c <= 90))
 {
 return (1);
 }
-else if ((c <= 122) && (c >= 97))
+else
 {
 return (0);
 }
-return (0);
 }
