@@ -1,41 +1,42 @@
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- * string_toupper - check the code for ALX School students.
+ * cap_string - capitalizes all words of a string
+ * @n: input value
  *
- *@str: passed parameter
  *
- * Return: str.
+ * Return: string
  */
-char *string_toupper(char *str)
+char *cap_string(char *n)
 {
-int cap, small, p, k, j = 0;
-char a[26], i[26];
-cap = 65;
-small = 97;
-/* assign asci characters to an array*/
-for (p = 0; cap < 91; cap++)
-{
-a[p] = cap;
-p++;
-}
-for (p = 0; small < 123; small++)
-{
-i[p] = small;
-p++;
-}
-/*end of asci character array */
-while (str[j] != '\0')
-{
-/* find each element of a string and replace it with uppercase */
-for (k = 0; k < 25; k++)
-{
-if (str[j] == i[k])
-{
-str[j] = a[k];
-}
-}
-j++;
-}
-return (str);
+	int i;
+
+	i = 0;
+	if (n[0] >= 'a' && n[0] <= 'z')
+	{
+		n[0] = n[0] - 32;
+	}
+	for (i = 0; n[i] != '\0'; i++)
+	{
+		switch (n[i])
+		{
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+			case ' ':
+			case '\n':
+			case '\t':
+				if (n[i + 1] > 96 && n[i + 1] < 123)
+				{
+					n[i + 1] = n[i + 1] - 32;
+				}
+		}
+	}
+	return (n);
 }
