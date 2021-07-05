@@ -13,8 +13,7 @@ char *ptr, *b;
 *b = src;
 while (n-- > 0)
 {
-*ptr++ = *b;
-b++;
+*ptr++ = *b++;
 }
 return (dest);
 }
