@@ -17,8 +17,8 @@ dest++;
 *b = src;
 while (n-- > 0)
 {
-*ptr++ = *src;
-src++;
+*ptr++ = *b;
+b++;
 }
 return (dest);
 }
