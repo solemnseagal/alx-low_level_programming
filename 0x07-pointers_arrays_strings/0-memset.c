@@ -6,6 +6,6 @@ char *ptr = s;
 while (n-- > 0)
 {
 *ptr++ = b;
-return (s);
 }
+return (s);
 }
