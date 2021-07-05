@@ -1,0 +1,24 @@
+#include <stdio.h>
+/**
+ *_memset -   fills memory with a constant byte
+ *@dest: pointer block of memory to fill
+ *@src: value to set
+ *@n: bytes of the memory
+ *Return: dest
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+char *ptr, *b;
+while (*dest == '\0')
+{
+dest++;
+}
+*ptr = dest;
+*b = src;
+while (n-- > 0)
+{
+*ptr++ = *src;
+src++;
+}
+return (dest);
+}
