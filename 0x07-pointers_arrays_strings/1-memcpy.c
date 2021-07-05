@@ -9,10 +9,6 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 char *ptr, *b;
-while (*dest == '\0')
-{
-dest++;
-}
 *ptr = dest;
 *b = src;
 while (n-- > 0)
