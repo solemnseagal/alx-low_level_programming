@@ -1,19 +1,17 @@
 #include <stdio.h>
+
 /**
- *_memcpy -   fills memory with a constant byte
- *@dest: pointer block of memory to fill
- *@src: value to set
+ *_memcpy -   copy number bytes form adress "from" to adress "to"
+ *@dest: content is to be copied
+ *@src: Source of data to be copied
  *@n: bytes of the memory
  *Return: dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-char *ptr, *b;
-*ptr = dest;
-*b = src;
 while (n-- > 0)
 {
-*ptr++ = *b++;
+*dest++ = *src++;
 }
 return (dest);
 }
