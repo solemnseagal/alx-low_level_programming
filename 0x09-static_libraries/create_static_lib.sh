@@ -1,2 +1,3 @@
 #!/bin/bash
-ar rc liball.a *.c | ranlib
+gcc -c *.c
+ar -rc liball.a *.o
