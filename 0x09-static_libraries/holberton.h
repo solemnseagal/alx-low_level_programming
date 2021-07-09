@@ -8,7 +8,7 @@ int _abs(int);
 int _isupper(int c);
 int _isdigit(int c);
 int _putchar(char c);
-int _strlen( char *str);
+int _strlen(char *str);
 void _puts(char *str);
 char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
