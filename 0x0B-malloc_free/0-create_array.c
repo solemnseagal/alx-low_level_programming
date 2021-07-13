@@ -1,14 +1,12 @@
 #include "holberton.h"
-#include <stdlib.h>
 /**
- * *create_array - creates an array of chars, and initializes it with a char
- * @size: size of the array
- * @c: char to be initialized with
- * Return: pointer to array or null
- **/
+ *create_array - array for prints a string
+ *@size: number elements array
+ *@c: char
+ *Return: pointer
+ */
+
 char *create_array(unsigned int size, char c)
-{
-	char *create_array(unsigned int size, char c)
 {
 	char *buffer;
 	unsigned int position;
@@ -38,5 +36,4 @@ char *create_array(unsigned int size, char c)
 		return (buffer);
 	}
 
-}
 }
