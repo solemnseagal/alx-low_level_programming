@@ -8,19 +8,35 @@
  **/
 char *create_array(unsigned int size, char c)
 {
-	char *str;
-	unsigned int i;
+	char *create_array(unsigned int size, char c)
+{
+	char *buffer;
+	unsigned int position;
 
 	if (size == 0)
-		return (NULL);
-	str = malloc(sizeof(char) * size);
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-	while (i < size)
 	{
-		str[i] = c;
-		i++;
+		return (NULL);
 	}
-	return (str);
+
+	/*Define values with malloc*/
+	buffer = (char *) malloc(size * sizeof(c));
+
+	if (buffer == 0)
+	{
+		return (NULL);
+	}
+
+	else
+	{
+		position = 0;
+		while (position < size) /*While for array*/
+		{
+			*(buffer + position) = c;
+			position++;
+		}
+
+		return (buffer);
+	}
+
+}
 }
