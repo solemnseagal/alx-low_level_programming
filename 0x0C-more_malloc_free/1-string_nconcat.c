@@ -11,31 +11,31 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strDup;
 	int i = 0;
+	unsigned int k = 0;
 	unsigned int j = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
 	while (s1[i] != '\0')
 		i++;
-	strDup = malloc(sizeof(char) * (i + n + 1));
-	if (strDup == NULL)
-		return (NULL);
-	i = 0;
 
-	while (s1[i] != '\0')
+	strDup = malloc(sizeof(char*) * (1 + i + n));
+
+	while (s1[k] != '\0' )
 	{
-		strDup[i] = s1[i];
-		i++;
+		strDup[k] = s1[k];
+		k++;
 	}
+
 	while (j < n && s2[j] != '\0')
 	{
-		strDup[i] = s2[j];
-		i++;
+		strDup[k] = s2[j];
+		k++;
 		j++;
 	}
-	strDup[i] = '\0';
+	strDup[k] = '\0';
+
 	return (strDup);
 }
