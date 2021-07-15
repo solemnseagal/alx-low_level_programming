@@ -21,9 +21,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s1[i] != '\0')
 		i++;
 
-	strDup = malloc(sizeof(char*) * (1 + i + n));
+	strDup = malloc(sizeof(char *) * (1 + i + n));
 
-	while (s1[k] != '\0' )
+	while (s1[k] != '\0')
 	{
 		strDup[k] = s1[k];
 		k++;
