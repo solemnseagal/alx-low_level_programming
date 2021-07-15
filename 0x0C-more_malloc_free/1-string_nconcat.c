@@ -22,6 +22,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 
 	strDup = malloc(sizeof(char *) * (1 + i + n));
+	if (strDup == NULL)
+	{
+		return (NULL);
+	}
 
 	while (s1[k] != '\0')
 	{
@@ -29,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		k++;
 	}
 
-	while (j <= n && s2[j] != '\0')
+	while (j < n && s2[j] != '\0')
 	{
 		strDup[k] = s2[j];
 		k++;
