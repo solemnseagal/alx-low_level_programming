@@ -32,7 +32,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (j < n && s2[j] != '\0')
 	{
 		strDup[i] = s2[j];
-		i++, j++;
+		i++;
+		j++;
 	}
 	strDup[i] = '\0';
 	return (strDup);
