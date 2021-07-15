@@ -11,7 +11,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strDup;
 	int i = 0;
-	unsigned int k = 0;
+	int k = 0;
 	unsigned int j = 0;
 
 	if (s1 == NULL)
@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		k++;
 	}
 
-	while (j < n && s2[j] != '\0')
+	while (j <= n && s2[j] != '\0')
 	{
 		strDup[k] = s2[j];
 		k++;
