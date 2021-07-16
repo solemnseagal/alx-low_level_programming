@@ -19,14 +19,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (; s1[index] != '\0'; index++, len++)
 		;
 
-	strDup = malloc(sizeof(char *) * (1 + len));
+	strDup = malloc(sizeof(char) * (1 + len));
 	if (!strDup)
 		return (NULL);
 
 	for (index = 0; s1[index] != '\0'; index++)
 		strDup[index] = s1[index];
-
-	len = 0;
 
 	for (len = 0; len < n && s2[len] != '\0'; len++)
 	{
