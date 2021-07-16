@@ -23,15 +23,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!strDup)
 		return (NULL);
 
-	for (index = 0; s1[index] != '\0'; index++)
-		strDup[index] = s1[index];
+	for (index = 0, len = 0; s1[index] != '\0'; index++, len++)
+		strDup[len] = s1[index];
 
-	for (len = 0; len < n && s2[len] != '\0'; len++)
-	{
-		strDup[index] = s2[len];
-		index++;
-	}
-	strDup[index] = '\0';
+	for (index = 0; index < n && s2[index] != '\0'; len++, index++)
+		strDup[len] = s2[index];
+
+	strDup[len] = '\0';
 
 	return (strDup);
 }
