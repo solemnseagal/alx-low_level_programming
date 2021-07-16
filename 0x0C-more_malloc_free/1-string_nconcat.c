@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 
 	strDup = malloc(sizeof(char *) * (1 + len));
-	if (strDup == NULL)
+	if (!strDup)
 		return (NULL);
 
 	for (index = 0; s1[index] != '\0'; index++)
