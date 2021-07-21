@@ -1,7 +1,5 @@
 #include "function_pointers.h"
-
-
-
+#include <stdlib.h>
 /*
 *Intresting note: functions are a set of instruction and
 *function pointers are pointers to the begning of this instruction
