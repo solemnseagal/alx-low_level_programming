@@ -1,15 +1,19 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
- * get_endianness - checks the endianness
- * Return: 0 if big endian, 1 if little endian
+ * get_endianness - checks if computer is big or little edian
+ * Return: 0 if big edian and 1 if little edian
  */
+
 int get_endianness(void)
 {
-	int i;
-	char *test;
+	char num;
+	char *ptr;
 
-	i = 1;
-	test = (char *)&i;
-	return ((int)test[0]);
+	num = '1';
+	ptr = &num;
+	if (*ptr == 0)
+		return (0);
+	else
+		return (1);
 }

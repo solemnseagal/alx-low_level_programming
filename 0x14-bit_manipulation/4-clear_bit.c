@@ -1,12 +1,20 @@
 #include "holberton.h"
 /**
- * clear_bit - sets the value of a bit to 0 at a given index
- * @n: pointer to number
- * @index: index to change
- * Return: 1 if it worked or -1 if an error occurred
+ * clear_bit -  sets the value of a bit to 0 at a given index.
+ * @n: number to check the value of
+ * @index: the index to look for the number
+ * Return: 1 if it worked, or -1 if an error occurred
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	*n = *n & ~(1 << index);
-	return ((index > 8 * sizeof(*n)) ? -1 : 1);
+	unsigned int number = *n;
+
+	if (index > sizeof(8) * 8)
+		return (-1);
+
+	number &= ~(1 << index);
+
+	*n = number;
+
+	return (1);
 }
